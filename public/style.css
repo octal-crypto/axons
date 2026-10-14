@@ -1,0 +1,51 @@
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: #292929;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.navbar-brand {
+  font-size: 2rem;
+}
+
+.card {
+  background-color: #333333;
+}
+
+
+/* Only local font loading and styles for reconstructed/unavailable features.
+   The original Bootstrap layout, breakpoints, spacing and colors are unmodified. */
+@font-face{font-family:Lato;font-style:normal;font-weight:400;src:url('./vendor/lato.ttf') format('truetype');font-display:swap}
+.artwork{position:relative;overflow:hidden;background:#111}
+.artwork canvas{position:absolute;inset:0;margin:auto;display:block;image-rendering:pixelated}
+.card .artwork{width:100%;aspect-ratio:1}
+.artwork[data-thumbnail] canvas{width:100%!important;height:100%!important;object-fit:contain}
+.registration-row{display:flex;gap:16px;align-items:center;padding:14px 0;border-bottom:1px solid #444}
+.tex{overflow-wrap:anywhere}
+
+/* The wallet selector replaces obsolete Web3Modal integrations. */
+ .wallet-dialog{background:#292929;color:#f8f9fa;border:1px solid #777;border-radius:4px;padding:24px;width:400px;max-width:calc(100vw - 32px);color-scheme:dark;box-shadow:0 12px 60px #0006}
+.wallet-dialog::backdrop{background:#0009}
+.wallet-close{float:right;border:0;background:none;color:inherit;font-size:28px;line-height:1}
+.wallet-option{display:flex;align-items:center;gap:16px;width:100%;padding:16px;border:1px solid #f8f9fa;border-radius:4px;background:transparent;color:#f8f9fa;margin:0;font:inherit;font-size:18px;text-align:left}
+.wallet-option:hover{background:#3b3b3b;color:#f8f9fa}
+.wallet-option:disabled{opacity:.65}
+.wallet-option img{width:32px;height:32px;object-fit:contain}
+.wallet-error{color:#ff9494;font-size:14px;margin:0}.wallet-error:empty{display:none}
+
+.wallet-dialog h4{margin:0 32px 24px 0}
+.wallet-list{display:flex;flex-direction:column;gap:12px}
+.wallet-list p{margin:0}
+.wallet-error:not(:empty){margin-top:16px}
+
+.card-text{display:flex;justify-content:center;flex-wrap:wrap;gap:4px 12px}
+.card-text>span{white-space:nowrap}
+
+.voting-candidate{width:100%;max-width:1000px;min-width:0;margin-bottom:24px}
+.voting-candidate .axonForVote{width:100%;aspect-ratio:1}
+.voting-candidate canvas{width:100%!important;height:100%!important;object-fit:contain}
+
+.voting-clock{width:100%;max-width:1000px;margin-inline:auto}

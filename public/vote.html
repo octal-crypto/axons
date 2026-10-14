@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8"><title>ΛXØNS</title><link rel="stylesheet" href="./vendor/bootstrap.min.css"><link rel="stylesheet" href="./style.css">
+  
+  
+  
+  
+  </link>
+  
+  
+  
+  
+</head>
+<body>
+
+
+
+<div class="text-secondary px-4 above">
+  <div class="py-5 text-light">
+    <div class="container">
+      <div class="row">
+        <!-- As a heading -->
+        <nav class="navbar navbar-expand-lg navbar-dark">
+          <a class="text-light navbar-brand" href="#">
+            ΛXØNS
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="./">Auction</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./vote"><b>Voting</b></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./results">Results</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./faq">FAQ</a>
+              </li>
+            </ul>
+          </div>
+          
+          <div id="prepare">
+            <button class="btn btn-outline-light btn-md px-4" id="connect" type="button">
+              Connect wallet
+            </button>
+          </div>
+          <div id="connected" style="display: none">
+            <button class="btn btn-outline-light btn-md px-4" id="disconnect" type="button">
+              <span id="token-amount"></span> $AXON
+            </button>
+          </div>
+        </nav>
+        
+      </div>
+      <br />
+      <div class="row">
+        <div id="main-col" class="col text-left">
+          <div id="prepare2">
+            <h5>Connect your wallet to place votes.</h5>
+          </div>
+          <div id="no-auction" style="display:none">
+            <h5>You can only vote during an active ΛXØNS auction.</h5>
+          </div>
+          <div id="unclaimed-genesis" style="display:none">
+            <h5>You must claim your genesis airdrop to be eligible to vote.</h5>
+            <button class="btn btn-outline-light" id="genesis-claim">Claim genesis votes</button>
+          </div>
+          <div id="not-registered" style="display:none">
+            <h5>You must register to vote to be eligible.</h5>
+            <div id="registration"></div>
+          </div>
+          <div id="no-axon" style="display:none">
+            <h5>You must have a ＦILΛMΞNTS NFT, an ΛXØNS NFT, or have claimed genesis airdrop $AXON to place votes.</h5>
+            <a href="https://opensea.io/collection/filaments-art">ＦILΛMΞNTS on OpenSea</a>
+          </div>
+          <div id="connected2" style="display:none">
+            <div id="already-voted" style="display:none">
+              <h5>You've already voted for ΛXØNS today. 💖 Thank you!</h5>
+            </div>
+            <div id="submit-votes" class="" style="display:none">
+              <button class="btn btn-outline-light btn-lg px-4" id="btn-submit" type="button">
+                Submit votes
+              </button>
+            </div>
+            <div id="voting-stage" class="d-flex justify-content-center">
+            </div>
+          </div>
+          <div id="clockdiv" class="voting-clock fs-5 mb-4 text-light">
+            <span class="hours"></span>
+            <span class="minutes"></span>
+            <span class="seconds"></span>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- We use simple <template> templating for the example -->
+<div id="templates" style="display: none">
+  <template id="template-axons">
+    <div class="voting-candidate">
+      <div>
+        <div class="justify-content-center">
+          <button class="btn btn-outline-light btn-md px-4" id="btn-yes" type="button">
+            🟢
+          </button>
+          <button class="btn btn-outline-light btn-md px-4" id="btn-no" type="button">
+            🔴
+          </button>
+        </div>
+        <br />
+        <div class="artwork axonForVote" ></div>
+      </div>
+    </div>
+  </template>
+  <template id="transaction">
+    <div class="tex">
+    </div>
+  </template>
+</div>
+
+
+
+
+
+
+
+
+<script src="./vendor/bootstrap.bundle.min.js"></script><script src="./vendor/p5.min.js"></script><script type="module" src="./app.js"></script></body>
+</html>
